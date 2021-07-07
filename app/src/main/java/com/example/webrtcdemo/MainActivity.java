@@ -21,8 +21,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        for(int i=0;i<40;i++) {
-            Log.d("count", String.valueOf(i));
+        for(int i=0;i<100;i++) {
           createPlayer(i);
         }
     }
@@ -39,6 +38,5 @@ public class MainActivity extends AppCompatActivity {
                 renderer.init(EglUtils.getRootEglBaseContext(),EglBase.CONFIG_PLAIN,new GlRectDrawer() );
                 renderer.createEglSurface(surfaceTexture);
                 renders.add(renderer);
-
     }
 }
